@@ -3,6 +3,7 @@ package com.kariknos.pms.controller;
 import java.util.List;
 import java.util.Optional;
 
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -68,7 +69,6 @@ public class PmsController {
 	@DeleteMapping("/delete/{id}")
 	public String deletePatient(Model model,@PathVariable("id") Long id)
 			throws RecordNotFoundException {
-		log.info("Delete id is {}",id);
 		pmsService.deletePatient(id);
 		return INDEX;	
 	}
