@@ -89,6 +89,7 @@ $(document).ready(function() {
 	
 	$("#closeButton").on('click',function(){
 		resetModal();
+		$("#addPatientForm").validate().resetForm();
 	});
 	
 	function resetModal(){
